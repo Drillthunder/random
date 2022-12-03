@@ -5,9 +5,9 @@
 int main() {
     char d;
     int n = 0, n1 = 1, n2 = 1000;
-    srand(time(NULL));
-    int nr = rand() % (n2 - n1 + 1) + n1;
     do {
+        srand(time(NULL));
+        int nr = rand() % (n2 - n1 + 1) + n1;
         printf ("%d\n", nr);
         printf("Tengo un numero entero del 1 al 1000\n");
         printf("�Puedes adivinar cual es?\n");
@@ -20,9 +20,9 @@ int main() {
                 printf("Muy abajo. Intenta de nuevo\n");
             } if (n == nr) {
                 printf("�Excelente! �Adivinaste el numero!\n");
-                break;
+                //break;
             }
-        }while (n == nr);
+        }while (n != nr);
         printf ("�Quieres jugar otra vez? (s o n)\n");
         fflush(stdin);
         scanf("%c", &d);
